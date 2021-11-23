@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "l3monitfk8s-bc69"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "l3monitfk8s-bc69"
+  template:
+    metadata:
+      labels:
+        app: "l3monitfk8s-bc69"
+    spec:
+      containers:
+        - name: "l3monitfk8s-bc69"
+          image: "l3moni.azurecr.io/l3monitfk8s"
+          ports:
+          - containerPort: 11000
