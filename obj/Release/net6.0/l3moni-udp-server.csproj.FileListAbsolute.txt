@@ -1,0 +1,15 @@
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\l3moni-udp-server.exe
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\l3moni-udp-server.deps.json
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\l3moni-udp-server.runtimeconfig.json
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\l3moni-udp-server.dll
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\ref\l3moni-udp-server.dll
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\bin\Release\net6.0\l3moni-udp-server.pdb
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.csproj.AssemblyReference.cache
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.AssemblyInfoInputs.cache
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.AssemblyInfo.cs
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.csproj.CoreCompileInputs.cache
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.dll
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\ref\l3moni-udp-server.dll
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.pdb
+D:\Projektit\l3moni-iot\l3moni-udp-demo\l3moni-udp-server\obj\Release\net6.0\l3moni-udp-server.genruntimeconfig.cache
