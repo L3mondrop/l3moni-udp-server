@@ -1,4 +1,0 @@
-docker build -t l3moni-udp-server .
-docker run -p 11000:11000/udp -itd l3moni-udp-server
-docker tag l3moni-udp-server lemondrop/l3moni-udp-server
-docker push lemondrop/l3moni-udp-server:latest
