@@ -16,10 +16,10 @@ public class UDPListener
         {
             while (true)
             {
-                Console.WriteLine("Waiting for broadcast");
+                //Console.WriteLine("Waiting for broadcast");
                 byte[] bytes = listener.Receive(ref groupEP);
 
-                Console.WriteLine($"Received broadcast from {groupEP} :");
+                //Console.WriteLine($"Received broadcast from {groupEP} :");
                 
                 Console.WriteLine($" {Encoding.ASCII.GetString(bytes, 0, bytes.Length)}");
             }
