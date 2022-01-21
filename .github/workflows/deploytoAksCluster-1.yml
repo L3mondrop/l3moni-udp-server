@@ -1,0 +1,50 @@
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - uses: azure/docker-login@v1
+      with:
+        login-server: l3moni.azurecr.io
+        username: ${{ secrets.acr_l3moni_username }}
+        password: ${{ secrets.acr_l3moni_password }}
+    
+    - name: Build and push image to ACR
+      id: build-image
+      run: |
+        docker build "$GITHUB_WORKSPACE/" -f  "Dockerfile" -t l3moni.azurecr.io/l3monitfk8s:${{ github.sha }} --label dockerfile-path=Dockerfile
+        docker push l3moni.azurecr.io/l3monitfk8s:${{ github.sha }}
+    
+    - uses: azure/k8s-set-context@v1
+      with:
+         kubeconfig: ${{ secrets.aks_l3monitfk8s_kubeConfig }}
+      id: login
+    
+    - name: Create namespace
+      run: |
+        namespacePresent=`kubectl get namespace | grep l3moni-udp | wc -l`
+        if [ $namespacePresent -eq 0 ]
+        then
+            echo `kubectl create namespace l3moni-udp`
+        fi
+
+    - uses: azure/k8s-create-secret@v1
+      with:
+        namespace: l3moni-udp
+        container-registry-url: l3moni.azurecr.io
+        container-registry-username: ${{ secrets.acr_l3moni_username }}
+        container-registry-password: ${{ secrets.acr_l3moni_password }}
+        secret-name: l3monitfk8sdockerauth
+       
+    - uses: azure/k8s-deploy@v1.2
+      with:
+        namespace: l3moni-udp
+        manifests: |
+          manifests/deployment-1.yml
+          manifests/service-1.yml
+        images: |
+          l3moni.azurecr.io/l3monitfk8s:${{ github.sha }}
+        imagepullsecrets: |
+          l3monitfk8sdockerauth
